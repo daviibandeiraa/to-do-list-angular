@@ -1,0 +1,20 @@
+<h1> {{ title }} </h1>
+
+<ul>
+  <p *ngIf="todos.length==0"><small>Não tem nenhuma tarefa hoje! :)</small></p>
+  <li *ngFor="let todo of todos">
+    {{ todo.id }}. {{ todo.title }} |
+    <button *ngIf="!todo.done" (click)="markAsDone(todo)"> Concluir </button> |
+    <button *ngIf="todo.done" (click)="markAsUndone(todo)">Refazer</button> |
+    <button (click)="remove(todo)">Remover</button>
+  </li>
+</ul>
+
+<form [formGroup]="form">
+  <fieldset>
+    <label>Tarefa: </label>
+    <input type="text" placeholder="Título da tarefa" maxlength="60" formControlName="title">
+
+    <button [disabled]="form.invalid" (click)="add()" >Salvar</button>
+  </fieldset>
+</form>
