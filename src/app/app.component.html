@@ -1,20 +1,34 @@
-<h1> {{ title }} </h1>
+<h1 id="title" class="animated fadeInUp"> {{ title }} </h1>
 
-<ul>
-  <p *ngIf="todos.length==0"><small>Não tem nenhuma tarefa hoje! :)</small></p>
-  <li *ngFor="let todo of todos">
-    {{ todo.id }}. {{ todo.title }} |
-    <button *ngIf="!todo.done" (click)="markAsDone(todo)"> Concluir </button> |
-    <button *ngIf="todo.done" (click)="markAsUndone(todo)">Refazer</button> |
-    <button (click)="remove(todo)">Remover</button>
-  </li>
-</ul>
+<div id="container" class="animated fadeInUp">
 
-<form [formGroup]="form">
-  <fieldset>
-    <label>Tarefa: </label>
-    <input type="text" placeholder="Título da tarefa" maxlength="60" formControlName="title">
+  <ul ul class="animated fadeInUp" *ngIf="mode=='list'">
+    <p *ngIf="todos.length==0"><small>Não tem nenhuma tarefa hoje! :)</small></p>
+    <li *ngFor="let todo of todos">
+      <button class="done" *ngIf="!todo.done" (click)="markAsDone(todo)"> <img src="../assets/img/checked (1).png"
+          alt=""> </button>
+      <button class="remake" *ngIf="todo.done" (click)="markAsUndone(todo)"><img
+          src="../assets/img/Design_sem_nome__1_-removebg-preview.png">
+      </button>
+      {{ todo.id }}. {{ todo.title }}
+      <button class="delete" (click)="remove(todo)"><img src="../assets/img/trash (1).png" alt=""></button>
+    </li>
+  </ul>
+  <div id="modal" *ngIf="mode=='add'" class="animated fadeInUp">
+    <form [formGroup]="form">
+      <input type="text" placeholder="Título da tarefa" maxlength="60" formControlName="title">
+      <button class="button-save" [disabled]="form.invalid" (click)="add()">Salvar</button>
+    </form>
+  </div>
 
-    <button [disabled]="form.invalid" (click)="add()" >Salvar</button>
-  </fieldset>
-</form>
+
+  <button id="button-new-task" class="animated fadeInUp" (click)="changeMode('add')" *ngIf="mode=='list'">
+    <i class="fas fa-plus-circle"></i>
+    NOVA TAREFA
+  </button>
+  <button id="button-cancel-task" class="add-button animated fadeInUp button" (click)="changeMode('list')" *ngIf="mode=='add'">
+    <i class="fas fa-times"></i>
+    CANCELAR
+  </button>
+
+</div>

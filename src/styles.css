@@ -1,1 +1,183 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  background: #3023ae;
+  background: -moz-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+  background: -webkit-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+  background: linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3023ae', endColorstr='#c86dd7', GradientType=1);
+}
+
+#container {
+  background-color: #fff;
+  width: 500px;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 50px auto 0;
+  padding-left: 20px;
+  -webkit-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.39);
+}
+
+ul {
+  text-align: left;
+  margin: 10px;
+  list-style: none;
+  background: #fff;
+  border-radius: 10px;
+  padding-top: 20px;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  padding: 20px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: 100;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+ul {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background: #fff;
+  border-radius: 10px;
+}
+
+li {
+  padding: 15px;
+  margin: 10px;
+  font-size: 1em;
+  font-style: italic;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  height: 50px;
+}
+
+li>button {
+  border: none;
+  background-color: #fff;
+  font-size: 1em;
+  float: right;
+  opacity: 0.6;
+  transition: opacity 1s;
+}
+
+li>button:hover {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+img {
+  height: 25px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+li:hover img {
+  opacity: 1;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  font-style: italic;
+  list-style: none;
+  box-shadow: 3px 4px 14px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  margin-bottom: 15px;
+
+}
+
+#title {
+  color: #fff;
+  font-size: 4em;
+  margin-top: 10px;
+  font-weight: 700;
+  -webkit-text-shadow: 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-text-shadow: 3px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+input {
+  width: 100%;
+  line-height: 50px;
+  text-indent: 10px;
+  font-size: 1.2em;
+  border: none;
+}
+
+#modal>h1 {
+  font-weight: 300;
+}
+
+#modal {
+  text-align: center;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.done {
+  padding: 0px 15px;
+}
+
+.delete {
+  padding: 0px 15px;
+}
+
+.remake {
+  padding: 0px 15px;
+}
+
+.button-save{
+  background: linear-gradient(45deg, #4b0091, #6b5bde, #4b0091, #6b5bde);
+  background-size: 400% 200%;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+#button-new-task{
+  background: linear-gradient(45deg, #4b0091, #6b5bde, #4b0091, #6b5bde);
+  background-size: 400% 200%;
+  font-weight: 500;
+}
+#button-cancel-task{
+  background: linear-gradient(45deg, #4b0091, #6b5bde, #4b0091, #6b5bde);
+  background-size: 400% 200%;
+  font-weight: 500;
+}
