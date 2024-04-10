@@ -17,7 +17,7 @@
   <div id="modal" *ngIf="mode=='add'" class="animated fadeInUp">
     <form [formGroup]="form">
       <input type="text" placeholder="Título da tarefa" maxlength="60" formControlName="title">
-      <button class="button-save" [disabled]="form.invalid" (click)="add()">Salvar</button>
+      <button class="button-save" [disabled]="form.invalid" (click)="add()"><i class="far fa-save"></i> Salvar</button>
     </form>
   </div>
 
